@@ -1,4 +1,32 @@
 data:extend({
+  -- locomotive unlocks
+  {
+    type = "technology",
+    name = "locomotive-light-a",
+    icon = "__base__/graphics/technology/braking-force.png",
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-light-a"
+      }
+    },
+    prerequisites = {"railway", "low-density-structure"},
+    unit =
+    {
+      count = 250,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1}
+      },
+      time = 60
+    },
+    upgrade = false
+  },
+  -- rail productivity
   {
     type = "technology",
     name = "rail-productivity-1",
@@ -140,6 +168,7 @@ data:extend({
     max_level = "infinite",
     upgrade = true
   },
+  -- braking force
   {
     type = "technology",
     name = "braking-force-8",
