@@ -2,7 +2,7 @@ data:extend({
   -- locomotive unlocks
   {
     type = "technology",
-    name = "locomotive-light-a",
+    name = "locomotive-light-1",
     icon = "__base__/graphics/technology/braking-force.png",
     icon_size = 256,
     effects =
@@ -12,7 +12,32 @@ data:extend({
         recipe = "locomotive-light-a"
       }
     },
-    prerequisites = {"railway", "low-density-structure"},
+    prerequisites = {"railway"},
+    unit =
+    {
+      count = 150,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1}
+      },
+      time = 30
+    },
+    upgrade = false
+  },
+  {
+    type = "technology",
+    name = "locomotive-light-2",
+    icon = "__base__/graphics/technology/braking-force.png",
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-light-b"
+      }
+    },
+    prerequisites = {"locomotive-light-1", "low-density-structure"},
     unit =
     {
       count = 250,
@@ -22,7 +47,112 @@ data:extend({
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1}
       },
-      time = 60
+      time = 30
+    },
+    upgrade = false
+  },
+  {
+    type = "technology",
+    name = "locomotive-light-3",
+    icon = "__base__/graphics/technology/braking-force.png",
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-light-c"
+      }
+    },
+    prerequisites = {"locomotive-light-2", "utility-science-pack"},
+    unit =
+    {
+      count = 500,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1}
+      },
+      time = 30
+    },
+    upgrade = false
+  },
+  {
+    type = "technology",
+    name = "locomotive-heavy-1",
+    icon = "__base__/graphics/technology/braking-force.png",
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-heavy-a"
+      }
+    },
+    prerequisites = {"railway"},
+    unit =
+    {
+      count = 150,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1}
+      },
+      time = 30
+    },
+    upgrade = false
+  },
+  {
+    type = "technology",
+    name = "locomotive-heavy-2",
+    icon = "__base__/graphics/technology/braking-force.png",
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-heavy-b"
+      }
+    },
+    prerequisites = {"locomotive-heavy-1", "low-density-structure"},
+    unit =
+    {
+      count = 250,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1}
+      },
+      time = 30
+    },
+    upgrade = false
+  },
+  {
+    type = "technology",
+    name = "locomotive-heavy-3",
+    icon = "__base__/graphics/technology/braking-force.png",
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-heavy-c"
+      }
+    },
+    prerequisites = {"locomotive-heavy-2", "utility-science-pack"},
+    unit =
+    {
+      count = 500,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1}
+      },
+      time = 30
     },
     upgrade = false
   },

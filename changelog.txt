@@ -1,8 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2025-10-16
+  Features:
+    - Added locomotive variations.
+    - Added minimap markers for locomotives.
+    - Added icon graphics for locomotives.
+  Bugfixes:
+    - The recipe that was unintentionally enabled from the beginning was disabled.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2025-10-15
   Features:
-    - Adds light weight locomotive
+    - Added light weight locomotive
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2025-10-15

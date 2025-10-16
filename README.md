@@ -4,19 +4,35 @@ Adds various rail-related upgrades/items.
 
 ## Locomotives
 
-+ ### Light weight locomotive
++ Stack size is increased to 20 for every locomotives.
 
-  + Adds light weight locomotive, which is half the weight of original.
++ Each locomotive has a unique minimap icon for easier identification.
 
-  + Needs low density structure to make.
++ ### Light weight locomotives
 
-  + Has slightly different minimap icons for custom trains.
+  + Have same acceleration as original but are lighter. (Hyper-level has slightly higher acceleration)
 
-  + Stack size is increased to 20. Stack size for original is also increased.
+  + Improved versions need low density structures.
+
+  + More suitable for short-distance transport.
+
+  + Displayed as a green icon on the minimap.
+
++ ### High-speed locomotives
+
+  + Have higher acceleration, but are heavier.
+
+  + Additional materials are required. Also, improved versions need low density structures. (May be changed to other materials.)
+
+  + More suitable for long-distance transport.
+
+  + Displayed as a blue icon on the minimap.
 
 ## Technologies
 
-+ Light weight locomotive
++ Light weight locomotive (1~3)
+
++ High-speed locomotive (1~3)
 
 + Infinite rail productivity (10% per level)
 
@@ -24,11 +40,13 @@ Adds various rail-related upgrades/items.
 
 ## Plans
 
-+ Add light weight version of cargo wagons as well
-
-+ Add variations of locomotives/cargo wagons
++ Add variations of cargo wagons as well
 
 + Add low-density (= light) rails for space age
+
++ Add recipes for upgrading existing locomotives. (maybe add downgrading recipes too)
+
++ Balancing
 
 -----
 

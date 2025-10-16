@@ -1,4 +1,5 @@
-require('prototypes.entity')
+require('prototypes.entity.locomotive')
+require('prototypes.entity.cargo-wagon')
 require('prototypes.item')
 require('prototypes.recipe')
 require('prototypes.technology')
