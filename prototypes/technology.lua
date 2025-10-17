@@ -10,6 +10,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "locomotive-light-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-light-a"
       }
     },
     prerequisites = {"railway"},
@@ -35,6 +39,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "locomotive-light-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-light-b"
       }
     },
     prerequisites = {"locomotive-light-1", "low-density-structure"},
@@ -61,6 +69,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "locomotive-light-c"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-light-c"
       }
     },
     prerequisites = {"locomotive-light-2", "utility-science-pack"},

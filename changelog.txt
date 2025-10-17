@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2025-10-17
+  Features:
+    - Added light weight cargo wagon variations.
+    - Added minimap markers for cargo wagons.
+    - Added icon graphics for cargo wagons.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2025-10-16
   Features:

@@ -84,4 +84,48 @@ data:extend({
     },
     results = {{type="item", name="locomotive-heavy-c", amount=1}}
   },
+-- cargo-wagon
+  -- light
+  {
+    type = "recipe",
+    name = "cargo-wagon-light-a",
+    energy_required = 1,
+    enabled = false,
+    ingredients =
+    {
+      {type = "item", name = "iron-gear-wheel", amount = 7},
+      {type = "item", name = "iron-plate", amount = 15},
+      {type = "item", name = "steel-plate", amount = 15}
+    },
+    results = {{type="item", name="cargo-wagon-light-a", amount=1}}
+  },
+  {
+    type = "recipe",
+    name = "cargo-wagon-light-b",
+    energy_required = 1,
+    enabled = false,
+    ingredients =
+    {
+      {type = "item", name = "iron-gear-wheel", amount = 5},
+      {type = "item", name = "iron-plate", amount = 10},
+      {type = "item", name = "steel-plate", amount = 10},
+      {type = "item", name = "low-density-structure", amount = 5}
+    },
+    results = {{type="item", name="cargo-wagon-light-b", amount=1}}
+  },
+  {
+    type = "recipe",
+    name = "cargo-wagon-light-c",
+    energy_required = 1,
+    enabled = false,
+    ingredients =
+    {
+      {type = "item", name = "iron-gear-wheel", amount = 2},
+      {type = "item", name = "iron-plate", amount = 5},
+      {type = "item", name = "steel-plate", amount = 5},
+      {type = "item", name = "low-density-structure", amount = 10}
+    },
+    results = {{type="item", name="cargo-wagon-light-c", amount=1}}
+  }
+-- fluid-wagon
 })
