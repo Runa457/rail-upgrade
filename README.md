@@ -28,6 +28,14 @@ Adds various rail-related upgrades/items.
 
   + Displayed as a blue icon on the minimap.
 
+## Cargo wagons
+
++ Stack size is increased to 40.
+
++ Lighter variants have less cargo space.
+
++ Heavier variants have more cargo space.
+
 ## Technologies
 
 + Light weight locomotive (1~3)
@@ -40,11 +48,13 @@ Adds various rail-related upgrades/items.
 
 ## Plans
 
-+ Add variations of cargo wagons as well
++ Add variations of fluid wagons as well
+
++ Add recipes for upgrading existing wagons as well
 
 + Add low-density (= light) rails for space age
 
-+ Add recipes for upgrading existing locomotives. (maybe add downgrading recipes too)
++ Add recipes for space age
 
 + Balancing
 

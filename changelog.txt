@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 2025-10-19
+  Features:
+    - Added large capacity cargo wagon variations.
+    - Added upgrade recipes for existing locomotives.
+  Minor features:
+    - Added descriptions for cargo wagons.
+  Changes:
+    - Locomotive technologies now need fluid wagon technology.
+    - Locomotive technologies unlocks corresponding cargo wagons and upgrade recipes.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2025-10-17
   Features:

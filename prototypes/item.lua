@@ -101,7 +101,31 @@ cw_light3.order = "c[rolling-stock]-b[cargo-wagon]-a[light]-3"
 cw_light3.place_result = cw_light3.name
 cw_light3.stack_size = 40
 
-data:extend({ cw_light1, cw_light2, cw_light3 })
+local cw_heavy1 = table.deepcopy(data.raw['item-with-entity-data']['cargo-wagon'])
+cw_heavy1.name = "cargo-wagon-heavy-a"
+cw_heavy1.icon = "__rail-upgrade__/graphics/icons/cw_heavy1.png"
+cw_heavy1.subgroup = "train-transport-cargo-wagon"
+cw_heavy1.order = "c[rolling-stock]-b[cargo-wagon]-b[heavy]-1"
+cw_heavy1.place_result = cw_heavy1.name
+cw_heavy1.stack_size = 40
+
+local cw_heavy2 = table.deepcopy(data.raw['item-with-entity-data']['cargo-wagon'])
+cw_heavy2.name = "cargo-wagon-heavy-b"
+cw_heavy2.icon = "__rail-upgrade__/graphics/icons/cw_heavy1.png"
+cw_heavy2.subgroup = "train-transport-cargo-wagon"
+cw_heavy2.order = "c[rolling-stock]-b[cargo-wagon]-b[heavy]-2"
+cw_heavy2.place_result = cw_heavy2.name
+cw_heavy2.stack_size = 40
+
+local cw_heavy3 = table.deepcopy(data.raw['item-with-entity-data']['cargo-wagon'])
+cw_heavy3.name = "cargo-wagon-heavy-c"
+cw_heavy3.icon = "__rail-upgrade__/graphics/icons/cw_heavy1.png"
+cw_heavy3.subgroup = "train-transport-cargo-wagon"
+cw_heavy3.order = "c[rolling-stock]-b[cargo-wagon]-b[heavy]-3"
+cw_heavy3.place_result = cw_heavy3.name
+cw_heavy3.stack_size = 40
+
+data:extend({ cw_light1, cw_light2, cw_light3, cw_heavy1, cw_heavy2, cw_heavy3 })
 
 local cw_org = data.raw["item-with-entity-data"]["cargo-wagon"]
 cw_org.stack_size = 40

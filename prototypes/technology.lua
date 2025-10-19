@@ -13,10 +13,14 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "locomotive-upgrade-to-light-a"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "cargo-wagon-light-a"
       }
     },
-    prerequisites = {"railway"},
+    prerequisites = {"fluid-wagon"},
     unit =
     {
       count = 150,
@@ -39,6 +43,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "locomotive-light-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-upgrade-to-light-b"
       },
       {
         type = "unlock-recipe",
@@ -72,6 +80,10 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "locomotive-upgrade-to-light-c"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "cargo-wagon-light-c"
       }
     },
@@ -100,9 +112,17 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "locomotive-heavy-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-upgrade-to-heavy-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-heavy-a"
       }
     },
-    prerequisites = {"railway"},
+    prerequisites = {"fluid-wagon"},
     unit =
     {
       count = 150,
@@ -125,6 +145,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "locomotive-heavy-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-upgrade-to-heavy-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-heavy-b"
       }
     },
     prerequisites = {"locomotive-heavy-1", "low-density-structure"},
@@ -151,6 +179,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "locomotive-heavy-c"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "locomotive-upgrade-to-heavy-c"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-heavy-c"
       }
     },
     prerequisites = {"locomotive-heavy-2", "utility-science-pack"},
