@@ -196,4 +196,21 @@ lc_heavy3.selected_minimap_representation = {
     scale = 0.5
 }
 
-data:extend({ lc_light1, lc_light2, lc_light3, lc_heavy1, lc_heavy2, lc_heavy3 })
+local lc_list = { lc_light1, lc_light2, lc_light3, lc_heavy1, lc_heavy2, lc_heavy3 }
+
+if settings.startup["rail-upgrade-locomotive-no-fuel"].value then
+    for _, lc in ipairs(lc_list) do
+        lc.energy_source = { type = "void" }
+    end
+    data.raw['locomotive']['locomotive'].energy_source = { type = "void" }
+end
+
+local radar_chunk = settings.startup["rail-upgrade-locomotive-radar"].value
+if radar_chunk > 0 then
+    for _, lc in ipairs(lc_list) do
+        lc.chunk_exploration_radius = radar_chunk
+    end
+    data.raw['locomotive']['locomotive'].chunk_exploration_radius = radar_chunk
+end
+
+data:extend(lc_list)
