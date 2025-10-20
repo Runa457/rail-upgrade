@@ -18,6 +18,18 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "cargo-wagon-light-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-upgrade-to-light-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-light-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-upgrade-to-light-a"
       }
     },
     prerequisites = {"fluid-wagon"},
@@ -51,6 +63,18 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "cargo-wagon-light-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-upgrade-to-light-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-light-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-upgrade-to-light-b"
       }
     },
     prerequisites = {"locomotive-light-1", "low-density-structure"},
@@ -85,6 +109,18 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "cargo-wagon-light-c"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-upgrade-to-light-c"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-light-c"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-upgrade-to-light-c"
       }
     },
     prerequisites = {"locomotive-light-2", "utility-science-pack"},
@@ -120,6 +156,18 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "cargo-wagon-heavy-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-upgrade-to-heavy-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-heavy-a"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-upgrade-to-heavy-a"
       }
     },
     prerequisites = {"fluid-wagon"},
@@ -153,6 +201,18 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "cargo-wagon-heavy-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-upgrade-to-heavy-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-heavy-b"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-upgrade-to-heavy-b"
       }
     },
     prerequisites = {"locomotive-heavy-1", "low-density-structure"},
@@ -187,6 +247,18 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "cargo-wagon-heavy-c"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "cargo-wagon-upgrade-to-heavy-c"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-heavy-c"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "fluid-wagon-upgrade-to-heavy-c"
       }
     },
     prerequisites = {"locomotive-heavy-2", "utility-science-pack"},

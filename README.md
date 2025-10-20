@@ -28,7 +28,7 @@ Adds various rail-related upgrades/items.
 
   + Displayed as a blue icon on the minimap.
 
-## Cargo wagons
+## Cargo wagons & fluid wagons
 
 + Stack size is increased to 40.
 
@@ -47,10 +47,6 @@ Adds various rail-related upgrades/items.
 + Infinite braking force upgrade (15% per level)
 
 ## Plans
-
-+ Add variations of fluid wagons as well
-
-+ Add recipes for upgrading existing wagons as well
 
 + Add low-density (= light) rails for space age
 
