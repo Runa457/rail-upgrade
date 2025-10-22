@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 2025-10-22
+  Bugfixes:
+    - Increased max speed of vanilla wagons to prevent high-speed locomotives from being constrained.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 2025-10-21
   Features:
