@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 2025-10-23
+  Features:
+    - Now supports space age DLC.
+    - Hyper-level trains now need carbon fiber or tungsten, and technologies need agricultural or metallurgic science pack.
+    - Added option to change recipes/technologies to older version which requires low density structure/utility science pack.
+    - Rail productivity needs both agricultural and metallurgic science pack from level 6, regardless of options.
+  Optimizations:
+    - Refactored internal code.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 2025-10-22
   Bugfixes:

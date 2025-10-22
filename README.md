@@ -14,6 +14,8 @@ Adds various rail-related upgrades/items.
 
   + Improved versions need low density structures.
 
+  + Hyper-level needs carbon fiber in space age.
+
   + More suitable for short-distance transport.
 
   + Displayed as a green icon on the minimap.
@@ -22,7 +24,9 @@ Adds various rail-related upgrades/items.
 
   + Have higher acceleration, but are heavier.
 
-  + Additional materials are required. Also, improved versions need low density structures. (May be changed to other materials.)
+  + Additional materials are required. Also, improved versions need low density structures.
+
+  + Hyper-level needs tungsten in space age.
 
   + More suitable for long-distance transport.
 

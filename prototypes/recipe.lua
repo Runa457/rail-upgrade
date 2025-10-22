@@ -24,6 +24,12 @@ local function gen_ingredient_list(itemlist)
     if itemlist.tank and itemlist.tank > 0 then
         table.insert(ingredients, { type = "item", name = "storage-tank", amount = itemlist.tank })
     end
+    if itemlist.tungsten and itemlist.tungsten > 0 then
+        table.insert(ingredients, { type = "item", name = "tungsten-plate", amount = itemlist.tungsten })
+    end
+    if itemlist.carbon and itemlist.carbon > 0 then
+        table.insert(ingredients, { type = "item", name = "carbon-fiber", amount = itemlist.carbon })
+    end
     return ingredients
 end
 
@@ -42,14 +48,24 @@ end
 local function ingredients_difference(high_level, low_level)
     local ingredients = {}
     local results = {}
-    for key, item in pairs(high_level) do
-        local value = high_level[key] - low_level[key]
+
+    local keys = {}
+
+    for key in pairs(high_level) do keys[key] = true end
+    for key in pairs(low_level) do keys[key] = true end
+    
+    for key in pairs(keys) do
+        local value_high = high_level[key] or 0
+        local value_low = low_level[key] or 0
+        local value = value_high - value_low
+
         if value > 0 then
             ingredients[key] = value
-        else
+        elseif value < 0 then
             results[key] = -value
         end
     end
+
     return ingredients, results
 end
 
@@ -77,36 +93,50 @@ local function add_upgrade_recipe(items)
     return recipe
 end
 
+local lc_org = { ingredients = {engine = 20, electronic = 10, steel = 30} }
+local cw_org = { ingredients = {gear = 10, iron = 20, steel = 20} }
+local fw_org = { ingredients = {gear = 10, steel = 16, pipe = 8, tank = 1} }
+
 local items_recipe = {
-    lc_la = { type = "locomotive", name = "light-a", energy_required = 4, ingredients = {engine = 15, electronic = 7, steel = 22, lds = 0} },
+    lc_la = { type = "locomotive", name = "light-a", energy_required = 4, ingredients = {engine = 15, electronic = 7, steel = 22} },
     lc_lb = { type = "locomotive", name = "light-b", energy_required = 4, ingredients = {engine = 10, electronic = 5, steel = 15, lds = 5} },
     lc_lc = { type = "locomotive", name = "light-c", energy_required = 4, ingredients = {engine = 5, electronic = 2, steel = 7, lds = 10} },
-    lc_ha = { type = "locomotive", name = "heavy-a", energy_required = 4, ingredients = {engine = 25, electronic = 12, steel = 37, lds = 0} },
+    lc_ha = { type = "locomotive", name = "heavy-a", energy_required = 4, ingredients = {engine = 25, electronic = 12, steel = 37} },
     lc_hb = { type = "locomotive", name = "heavy-b", energy_required = 4, ingredients = {engine = 25, electronic = 12, steel = 37, lds = 5} },
     lc_hc = { type = "locomotive", name = "heavy-c", energy_required = 4, ingredients = {engine = 30, electronic = 15, steel = 45, lds = 10} },
 
-    cw_la = { type = "cargo-wagon", name = "light-a", energy_required = 1, ingredients = {gear = 7, iron = 15, steel = 15, lds = 0} },
+    cw_la = { type = "cargo-wagon", name = "light-a", energy_required = 1, ingredients = {gear = 7, iron = 15, steel = 15} },
     cw_lb = { type = "cargo-wagon", name = "light-b", energy_required = 1, ingredients = {gear = 5, iron = 10, steel = 10, lds = 5} },
     cw_lc = { type = "cargo-wagon", name = "light-c", energy_required = 1, ingredients = {gear = 2, iron = 5, steel = 5, lds = 10} },
-    cw_ha = { type = "cargo-wagon", name = "heavy-a", energy_required = 1, ingredients = {gear = 12, iron = 25, steel = 25, lds = 0} },
+    cw_ha = { type = "cargo-wagon", name = "heavy-a", energy_required = 1, ingredients = {gear = 12, iron = 25, steel = 25} },
     cw_hb = { type = "cargo-wagon", name = "heavy-b", energy_required = 1, ingredients = {gear = 12, iron = 25, steel = 25, lds = 5} },
     cw_hc = { type = "cargo-wagon", name = "heavy-c", energy_required = 1, ingredients = {gear = 15, iron = 30, steel = 30, lds = 10} },
 
-    fw_la = { type = "fluid-wagon", name = "light-a", energy_required = 1.5, ingredients = {gear = 7, steel = 12, pipe = 6, tank = 1, lds = 0} },
+    fw_la = { type = "fluid-wagon", name = "light-a", energy_required = 1.5, ingredients = {gear = 7, steel = 12, pipe = 6, tank = 1} },
     fw_lb = { type = "fluid-wagon", name = "light-b", energy_required = 1.5, ingredients = {gear = 5, steel = 8, pipe = 4, tank = 1, lds = 5} },
     fw_lc = { type = "fluid-wagon", name = "light-c", energy_required = 1.5, ingredients = {gear = 2, steel = 4, pipe = 2, tank = 1, lds = 10} },
-    fw_ha = { type = "fluid-wagon", name = "heavy-a", energy_required = 1.5, ingredients = {gear = 12, steel = 20, pipe = 10, tank = 1, lds = 0} },
+    fw_ha = { type = "fluid-wagon", name = "heavy-a", energy_required = 1.5, ingredients = {gear = 12, steel = 20, pipe = 10, tank = 1} },
     fw_hb = { type = "fluid-wagon", name = "heavy-b", energy_required = 1.5, ingredients = {gear = 12, steel = 20, pipe = 10, tank = 1, lds = 5} },
     fw_hc = { type = "fluid-wagon", name = "heavy-c", energy_required = 1.5, ingredients = {gear = 15, steel = 24, pipe = 12, tank = 1, lds = 10} }
 }
 
+if mods["space-age"] and not settings.startup["rail-upgrade-utility-pack-for-level3"].value then
+    local light_trains = { items_recipe.lc_lc, items_recipe.cw_lc, items_recipe.fw_lc }
+    local heavy_trains = { items_recipe.lc_hc, items_recipe.cw_hc, items_recipe.fw_hc }
+
+    for _, train in pairs(light_trains) do
+        train.ingredients["lds"] = nil
+        train.ingredients["carbon"] = 10
+    end
+    for _, train in pairs(heavy_trains) do
+        train.ingredients["lds"] = nil
+        train.ingredients["tungsten"] = 10
+    end
+end
+
 for _, item in pairs(items_recipe) do
     data:extend({add_recipe(item)})
 end
-
-local lc_org = { ingredients = {engine = 20, electronic = 10, steel = 30, lds = 0} }
-local cw_org = { ingredients = {gear = 10, iron = 20, steel = 20, lds = 0} }
-local fw_org = { ingredients = {gear = 10, steel = 16, pipe = 8, tank = 1, lds = 0} }
 
 local icons = {
     green1 = {
