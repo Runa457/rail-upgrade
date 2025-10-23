@@ -306,3 +306,20 @@ local items_upgrade_recipe = {
 for _, item in pairs(items_upgrade_recipe) do
     data:extend({add_upgrade_recipe(item)})
 end
+
+if mods["space-age"] then
+    data:extend({
+        {
+            type = "recipe",
+            name = "rail-light",
+            energy_required = 2,
+            enabled = false,
+            ingredients =
+            {
+                {type = "item", name = "tungsten-plate", amount = 1},
+                {type = "item", name = "carbon-fiber", amount = 1}
+            },
+            results = { { type = "item", name = "rail-light", amount = 20 } }
+        }
+    })
+end

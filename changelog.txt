@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: 2025-10-24
+  Features:
+    - Added advanced rail that needs tungsten plate and carbon fiber.
+    - Advanced rail technology needs both hyper-level train technologies.
+    - Rail productivity is also applied for advanced rail.
+  Changes:
+    - Rail productivity 6 and so on now need advanced rail technology.
+  Minor features:
+    - Added icon graphics for advanced rail.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.0
 Date: 2025-10-23
   Features:

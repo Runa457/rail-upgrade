@@ -157,18 +157,44 @@ local rail6 = {
 }
 
 if mods["space-age"] then
+    local rail_light = {
+        type = "technology",
+        name = "rail-light",
+        icon = "__base__/graphics/technology/railway.png",
+        icon_size = 256,
+        effects =
+        {
+            {
+                type = "unlock-recipe",
+                recipe = "rail-light"
+            }
+        },
+        prerequisites = {},
+        unit =
+        {
+            count = 1000,
+            ingredients = gen_ingredients({1, 2, 4, 5, 7, 8, 10}),
+            time = 30
+        },
+        upgrade = false
+    }
+    table.insert(rail_prod, { type = "change-recipe-productivity", recipe = "rail-light", change = 0.1 })
+
     if settings.startup["rail-upgrade-utility-pack-for-level3"].value then
-        rail6.prerequisites = {"rail-productivity-5", "metallurgic-science-pack", "agricultural-science-pack"}
+        rail_light.prerequisites = {"locomotive-light-3", "locomotive-heavy-3", "carbon-fiber", "metallurgic-science-pack"}
     else
         items_tech.light3.prerequisites = {"locomotive-light-2", "carbon-fiber"}
         items_tech.light3.pack_list = {1, 2, 4, 7, 10}
         items_tech.heavy3.prerequisites = {"locomotive-heavy-2", "metallurgic-science-pack"}
         items_tech.heavy3.pack_list = {1, 2, 4, 7, 8}
-        
-        -- rail6.prerequisites = {"rail-productivity-5", "locomotive-light-3", "locomotive-heavy-3"}
-        rail6.prerequisites = {"rail-productivity-5", "metallurgic-science-pack", "agricultural-science-pack"}
-        rail6.unit.ingredients = gen_ingredients({1, 2, 4, 5, 6, 7, 8, 10})
+
+        rail_light.prerequisites = {"locomotive-light-3", "locomotive-heavy-3"}
     end
+
+    rail6.prerequisites = {"rail-productivity-5", "rail-light"}
+    rail6.unit.ingredients = gen_ingredients({1, 2, 4, 5, 6, 7, 8, 10})
+
+    data:extend({rail_light})
 end
 
 for _, item in pairs(items_tech) do

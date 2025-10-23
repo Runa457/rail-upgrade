@@ -1,6 +1,7 @@
 require('prototypes.entity.locomotive')
 require('prototypes.entity.cargo-wagon')
 require('prototypes.entity.fluid-wagon')
+require('prototypes.entity.rail')
 require('prototypes.item')
 require('prototypes.recipe')
 require('prototypes.technology')

@@ -40,6 +40,18 @@ Adds various rail-related upgrades/items.
 
 + Heavier variants have more cargo space.
 
+## Advanced rails
+
++ New railroads requiring tungsten plates and carbon fiber.
+
++ In exchange for the high cost, production rate is high, and stack size is larger.
+
++ Removal speed is twice as fast.
+
++ Good for massive railway production on various planets.
+
++ Supports elevated rails and can connect to vanilla railroads.
+
 ## Technologies
 
 + Light weight locomotive (1~3)
@@ -52,7 +64,7 @@ Adds various rail-related upgrades/items.
 
 ## Plans
 
-+ Add low-density (= light) rails for space age
++ Add new graphics for advanced rails.
 
 + Add recipes for space age
 
