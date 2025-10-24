@@ -12,6 +12,7 @@ end
 local items = {
     {
         name = 'locomotive-light-a',
+        icon = "__rail-upgrade__/graphics/icons/lc_light1.png",
         max_health = 800,
         weight = 1500,
         friction_force = 0.25,
@@ -23,6 +24,7 @@ local items = {
     },
     {
         name = 'locomotive-light-b',
+        icon = "__rail-upgrade__/graphics/icons/lc_light1.png",
         max_health = 800,
         weight = 1000,
         friction_force = 0.25,
@@ -34,6 +36,7 @@ local items = {
     },
     {
         name = 'locomotive-light-c',
+        icon = "__rail-upgrade__/graphics/icons/lc_light1.png",
         max_health = 800,
         weight = 800,
         friction_force = 0.25,
@@ -45,6 +48,7 @@ local items = {
     },
     {
         name = 'locomotive-heavy-a',
+        icon = "__rail-upgrade__/graphics/icons/lc_heavy1.png",
         max_health = 1500,
         weight = 3000,
         friction_force = 0.75,
@@ -56,6 +60,7 @@ local items = {
     },
     {
         name = 'locomotive-heavy-b',
+        icon = "__rail-upgrade__/graphics/icons/lc_heavy1.png",
         max_health = 1500,
         weight = 4000,
         friction_force = 0.75,
@@ -67,6 +72,7 @@ local items = {
     },
     {
         name = 'locomotive-heavy-c',
+        icon = "__rail-upgrade__/graphics/icons/lc_heavy1.png",
         max_health = 1500,
         weight = 5000,
         friction_force = 0.75,

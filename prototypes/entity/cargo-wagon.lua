@@ -11,6 +11,7 @@ end
 local items = {
     {
         name = 'cargo-wagon-light-a',
+        icon = "__rail-upgrade__/graphics/icons/cw_light1.png",
         max_health = 450,
         weight = 800,
         friction_force = 0.25,
@@ -22,6 +23,7 @@ local items = {
     },
     {
         name = 'cargo-wagon-light-b',
+        icon = "__rail-upgrade__/graphics/icons/cw_light1.png",
         max_health = 450,
         weight = 500,
         friction_force = 0.25,
@@ -33,6 +35,7 @@ local items = {
     },
     {
         name = 'cargo-wagon-light-c',
+        icon = "__rail-upgrade__/graphics/icons/cw_light1.png",
         max_health = 450,
         weight = 400,
         friction_force = 0.25,
@@ -44,6 +47,7 @@ local items = {
     },
     {
         name = 'cargo-wagon-heavy-a',
+        icon = "__rail-upgrade__/graphics/icons/cw_heavy1.png",
         max_health = 750,
         weight = 1500,
         friction_force = 0.75,
@@ -55,6 +59,7 @@ local items = {
     },
     {
         name = 'cargo-wagon-heavy-b',
+        icon = "__rail-upgrade__/graphics/icons/cw_heavy1.png",
         max_health = 750,
         weight = 2000,
         friction_force = 0.75,
@@ -66,6 +71,7 @@ local items = {
     },
     {
         name = 'cargo-wagon-heavy-c',
+        icon = "__rail-upgrade__/graphics/icons/cw_heavy1.png",
         max_health = 750,
         weight = 2500,
         friction_force = 0.75,

@@ -72,37 +72,37 @@ local items_tech = {
     -- locomotive
     light1 = {
         name = "locomotive-light-1", effects = gen_effects("light-a"),
-        icon = "__base__/graphics/technology/braking-force.png", upgrade = false,
+        icon = "__rail-upgrade__/graphics/technology/train-light.png", upgrade = false,
         prerequisites = {"fluid-wagon"},
         count = 150, pack_list = {1, 2}, time = 30
     },
     light2 = {
         name = "locomotive-light-2", effects = gen_effects("light-b"),
-        icon = "__base__/graphics/technology/braking-force.png", upgrade = false,
+        icon = "__rail-upgrade__/graphics/technology/train-light.png", upgrade = false,
         prerequisites = {"locomotive-light-1", "low-density-structure"},
         count = 250, pack_list = {1, 2, 4}, time = 30
     },
     light3 = {
         name = "locomotive-light-3", effects = gen_effects("light-c"),
-        icon = "__base__/graphics/technology/braking-force.png", upgrade = false,
+        icon = "__rail-upgrade__/graphics/technology/train-light.png", upgrade = false,
         prerequisites = {"locomotive-light-2", "utility-science-pack"},
         count = 500, pack_list = {1, 2, 4, 6}, time = 30
     },
     heavy1 = {
         name = "locomotive-heavy-1", effects = gen_effects("heavy-a"),
-        icon = "__base__/graphics/technology/braking-force.png", upgrade = false,
+        icon = "__rail-upgrade__/graphics/technology/train-heavy.png", upgrade = false,
         prerequisites = {"fluid-wagon"},
         count = 150, pack_list = {1, 2}, time = 30
     },
     heavy2 = {
         name = "locomotive-heavy-2", effects = gen_effects("heavy-b"),
-        icon = "__base__/graphics/technology/braking-force.png", upgrade = false,
+        icon = "__rail-upgrade__/graphics/technology/train-heavy.png", upgrade = false,
         prerequisites = {"locomotive-heavy-1", "low-density-structure"},
         count = 250, pack_list = {1, 2, 4}, time = 30
     },
     heavy3 = {
         name = "locomotive-heavy-3", effects = gen_effects("heavy-c"),
-        icon = "__base__/graphics/technology/braking-force.png", upgrade = false,
+        icon = "__rail-upgrade__/graphics/technology/train-heavy.png", upgrade = false,
         prerequisites = {"locomotive-heavy-2", "utility-science-pack"},
         count = 500, pack_list = {1, 2, 4, 6}, time = 30
     },
@@ -160,7 +160,7 @@ if mods["space-age"] then
     local rail_light = {
         type = "technology",
         name = "rail-light",
-        icon = "__base__/graphics/technology/railway.png",
+        icon = "__rail-upgrade__/graphics/technology/railway-light.png",
         icon_size = 256,
         effects =
         {

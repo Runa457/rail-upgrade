@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+Date: 2025-10-24
+  Features:
+    - Added graphics for advanced rail entities.
+  Minor features:
+    - Added graphics for locomotives/advanced rail technologies.
+  Bugfixes:
+    - Icons for braking force bonus are now properly displayed. 
+---------------------------------------------------------------------------------------------------
 Version: 0.5.1
 Date: 2025-10-24
   Features:

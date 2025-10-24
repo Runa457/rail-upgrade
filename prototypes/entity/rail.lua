@@ -40,6 +40,22 @@ if mods["space-age"] then
         item.placeable_by.item = "rail-light"
     end
 
+    for _, item in pairs({straight_ground, half_diag_ground, curved_a_ground, curved_b_ground}) do
+        for _, direction in pairs(item.pictures) do
+            if direction.ties then
+                direction.ties.filename = "__rail-upgrade__/graphics/rails/advanced-rail-ties.png"
+            end
+        end
+    end
+
+    for _, item in pairs({straight_elev, half_diag_elev, curved_a_elev, curved_b_elev}) do
+        for _, direction in pairs(item.pictures) do
+            if direction.stone_path and direction.stone_path.filename then
+                direction.stone_path.filename = "__rail-upgrade__/graphics/rails/advanced-elevated-rail-base-top.png"
+            end
+        end
+    end
+
     data:extend(light_rails)
     
     local rail_light_planner = table.deepcopy(data.raw["rail-planner"]["rail"])

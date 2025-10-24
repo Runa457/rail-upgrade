@@ -4,6 +4,7 @@ function Rail_upgrade_gen_RollingStock(items, org_prototype)
 -- PrototypeBase / EntityPrototype / EntityWithHealthPrototype properties
     new_rs.name = items.name
     new_rs.minable.result = items.name
+    new_rs.icon = items.icon
     new_rs.max_health = items.max_health -- default 1000
 
 -- VehiclePrototype properties

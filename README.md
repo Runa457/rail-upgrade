@@ -58,6 +58,8 @@ Adds various rail-related upgrades/items.
 
 + High-speed locomotive (1~3)
 
++ Advanced rail
+
 + Infinite rail productivity (10% per level)
 
 + Infinite braking force upgrade (15% per level)
